@@ -1,0 +1,854 @@
+/* =========================================================
+   SHOPSPHERE AUTHENTICATION
+========================================================= */
+
+.auth-page {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 15% 20%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%),
+        radial-gradient(circle at 85% 80%,
+            rgba(99, 102, 241, 0.08),
+            transparent 30%),
+        #f8fafc;
+}
+
+.auth-container {
+    width: min(1040px, 100%);
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow:
+        0 25px 70px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   BRAND PANEL
+========================================================= */
+
+.auth-brand-panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 55px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 15%,
+            rgba(96, 165, 250, 0.25),
+            transparent 30%),
+        linear-gradient(145deg,
+            #0f172a,
+            #172554);
+}
+
+.auth-brand-panel::before {
+    content: "";
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -80px;
+    bottom: -90px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+}
+
+.auth-brand-panel::after {
+    content: "";
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: -70px;
+    top: -70px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.auth-brand-content {
+    position: relative;
+    z-index: 2;
+    max-width: 430px;
+}
+
+.auth-brand-mark {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border-radius: 17px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   COMMON EYEBROW
+========================================================= */
+
+.auth-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+
+    color: #2563eb;
+}
+
+.auth-brand-content .auth-eyebrow {
+    color: #93c5fd;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+.auth-brand-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+.auth-brand-content p {
+    max-width: 400px;
+
+    margin: 22px 0 0;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.auth-features {
+    display: grid;
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+.auth-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #e2e8f0;
+
+    font-size: 14px;
+}
+
+.auth-feature-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.auth-form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    background: #ffffff;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.auth-subtitle {
+    margin: 12px 0 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.auth-error {
+    margin-top: 20px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #fecaca;
+    border-radius: 11px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.auth-form {
+    margin-top: 30px;
+}
+
+.auth-form-group {
+    margin-bottom: 19px;
+}
+
+.auth-form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.auth-input-wrapper {
+    position: relative;
+}
+
+.auth-input {
+    box-sizing: border-box;
+
+    width: 100%;
+    min-height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dbe3ee;
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.auth-input::placeholder {
+    color: #94a3b8;
+}
+
+.auth-input:hover {
+    border-color: #cbd5e1;
+}
+
+.auth-input:focus {
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+.auth-password-input {
+    padding-right: 65px;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.auth-password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    padding: 5px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.auth-password-toggle:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.auth-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 3px 0 22px;
+
+    font-size: 13px;
+}
+
+.auth-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #64748b;
+
+    cursor: pointer;
+}
+
+.auth-check input {
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.auth-submit {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 13px 28px rgba(37, 99, 235, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.auth-submit:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 17px 32px rgba(37, 99, 235, 0.25);
+}
+
+.auth-submit:active {
+    transform: translateY(0);
+}
+
+.auth-submit:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================================
+   REGISTER LINK
+========================================================= */
+
+.auth-bottom-text {
+    margin: 25px 0 0;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.auth-bottom-text a {
+    color: #2563eb;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.auth-bottom-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand-panel {
+        min-height: 330px;
+        padding: 45px;
+    }
+
+    .auth-brand-content {
+        max-width: 600px;
+    }
+
+    .auth-brand-content h1 {
+        font-size: 42px;
+    }
+
+    .auth-form-panel {
+        padding: 45px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .auth-page {
+        min-height: calc(100vh - 70px);
+
+        padding: 30px 14px;
+    }
+
+    .auth-container {
+        border-radius: 20px;
+    }
+
+    .auth-brand-panel {
+        min-height: 285px;
+        padding: 32px 25px;
+    }
+
+    .auth-brand-mark {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 20px;
+
+        border-radius: 14px;
+
+        font-size: 23px;
+    }
+
+    .auth-brand-content h1 {
+        font-size: 34px;
+    }
+
+    .auth-brand-content p {
+        margin-top: 16px;
+
+        font-size: 14px;
+    }
+
+    .auth-features {
+        display: none;
+    }
+
+    .auth-form-panel {
+        padding: 35px 24px;
+    }
+
+    .auth-card h2 {
+        font-size: 29px;
+    }
+
+    .auth-options {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .auth-page {
+        padding: 20px 10px;
+    }
+
+    .auth-brand-panel {
+        min-height: 260px;
+        padding: 27px 20px;
+    }
+
+    .auth-form-panel {
+        padding: 30px 18px;
+    }
+
+    .auth-card h2 {
+        font-size: 27px;
+    }
+}
+
+/* =========================================================
+   REGISTER SUCCESS MODAL
+========================================================= */
+
+.register-success-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.58);
+
+    backdrop-filter: blur(7px);
+
+    animation:
+        registerOverlayIn 0.2s ease;
+}
+
+
+.register-success-modal {
+    width: min(460px, 100%);
+
+    padding: 42px 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 90px rgba(15, 23, 42, 0.25);
+
+    animation:
+        registerModalIn 0.25s ease;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.register-success-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(22, 163, 74, 0.14);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.register-success-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.register-success-modal h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.register-success-modal p {
+    max-width: 390px;
+
+    margin: 14px auto 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.register-success-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 28px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-success-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 16px 30px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.register-success-secondary {
+    margin-top: 14px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.register-success-secondary:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes registerOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes registerModalIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   MODAL RESPONSIVE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .register-success-overlay {
+        padding: 15px;
+    }
+
+    .register-success-modal {
+        padding: 34px 24px;
+
+        border-radius: 20px;
+    }
+
+    .register-success-icon {
+        width: 64px;
+        height: 64px;
+
+        font-size: 29px;
+    }
+
+    .register-success-modal h2 {
+        font-size: 24px;
+    }
+
+    .register-success-modal p {
+        font-size: 13px;
+    }
+}
